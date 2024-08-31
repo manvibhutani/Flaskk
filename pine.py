@@ -1,4 +1,4 @@
-import pinecone  # Correct import for Pinecone client
+from pinecone import Pinecone,ServerlessSpec # Correct import for Pinecone client
 import google.generativeai as genai
 
 # Configure Google Generative AI API
