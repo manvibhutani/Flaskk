@@ -1,8 +1,12 @@
-import pinecone
+import pinecone  # Correct import for Pinecone client
 import google.generativeai as genai
 
+# Configure Google Generative AI API
 genai.configure(api_key="AIzaSyDGJFFUTdcyFzaIcgS698-I7ZvZiWK0WuI")
-pc = Pinecone(api_key="4f3dd80b-1c86-4be6-90b4-7f0f21b6bc06")
+
+# Initialize Pinecone
+pinecone.init(api_key="4f3dd80b-1c86-4be6-90b4-7f0f21b6bc06", environment="us-west1-gcp")  # Specify the environment
+
 
 
 def clean_vector_id(vector_id):
