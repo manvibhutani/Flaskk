@@ -72,10 +72,14 @@ def pdfv():
     make_an_store(k,c)
     print('Done')
     return jsonify({
+      
         "res" :"Done"
     })
 
-
+@app.route('/')
+def print1():
+    print("Hello, world!!")
 
 if __name__ == '__main__':
     app.run(debug=True)
+    print("Hello, world!!")
