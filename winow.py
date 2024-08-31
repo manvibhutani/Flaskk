@@ -51,5 +51,3 @@ def compare_texts(text1, text2, k=5, window_size=4):
 def similarity_score(text1,text2):
     similarity = compare_texts(text1, text2)
     return similarity*100
-
-
