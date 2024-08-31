@@ -1,4 +1,4 @@
-from pinecone import Pinecone
+import pinecone
 import google.generativeai as genai
 
 genai.configure(api_key="AIzaSyDGJFFUTdcyFzaIcgS698-I7ZvZiWK0WuI")
