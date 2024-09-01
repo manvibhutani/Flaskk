@@ -1,1 +1,2 @@
-docx
+from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
+import os

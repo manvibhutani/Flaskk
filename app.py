@@ -5,6 +5,7 @@ from  voice import summarise_voice
 from quiz import quizmaker
 from chatgpt import rungpt
 from chatPdf import make_an_store
+from aiGenerated import classify_text
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -76,6 +77,15 @@ def pdfv():
     return jsonify({
       
         "res" :"Done"
+    })
+
+@app.route("/plag")
+def detect():
+    data=request.json
+    txt=data.get("text")
+    res=classify_text(txt) 
+    return jsonify({
+        "res":res
     })
 
 @app.route('/')
